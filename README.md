@@ -107,3 +107,14 @@ run SQL query
 ```
 GRANT ALL ON *.* to isucon@'%' IDENTIFIED BY 'isucon';
 ```
+
+### Install redis
+```
+sudo apt install redis-server
+
+sudo vim /etc/redis/redis.conf
+# edit:
+# protected-mode no
+# supervised systemd
+# comment out bind 127.0.0.1 ::1
+```
