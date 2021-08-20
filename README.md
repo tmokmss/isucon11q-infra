@@ -17,7 +17,7 @@ Host *
 # register ssh key
 # https://github.com/settings/ssh/new
 
-git clone git@github.com:tmokmss/isucon10q-infra.git
+git clone git@github.com:tmokmss/isucon11q-infra.git
 
 git config --global user.email "email@example.com"
 git config --global user.name "tmokmss"
