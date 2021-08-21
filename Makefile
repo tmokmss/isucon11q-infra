@@ -18,12 +18,6 @@ init:
 	cp /etc/nginx/nginx.conf ./nginx.conf | true
 	sudo rm -f /etc/nginx/nginx.conf
 	sudo ln -s `pwd`/nginx.conf /etc/nginx/nginx.conf
-	cp /etc/mysql/mariadb.conf.d/50-server.cnf ./50-server.cnf | true
-	sudo rm -f /etc/mysql/mariadb.conf.d/50-server.cnf
-	sudo ln -s `pwd`/50-server.cnf /etc/mysql/mariadb.conf.d/50-server.cnf
-	cp /etc/mysql/my.cnf ./my.cnf | true
-	sudo rm -f /etc/mysql/my.cnf
-	sudo ln -s `pwd`/my.cnf /etc/mysql/my.cnf
 apply:
 	source ~/.bashrc
 	# bind -f ~/.inputrc
