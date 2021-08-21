@@ -11,7 +11,7 @@ init:
 	ln -s `pwd`/.inputrc ~/.inputrc
 	cp /etc/nginx/sites-enabled/isucondition.conf ./isucondition.conf | true
 	sudo rm -f /etc/nginx/sites-enabled/isucondition.conf
-	sudo ln -s `pwd`/isuumo.conf /etc/nginx/sites-enabled/isucondition.conf
+	sudo ln -s `pwd`/isucondition.conf /etc/nginx/sites-enabled/isucondition.conf
 	cp /etc/nginx/nginx.conf ./nginx.conf | true
 	sudo rm -f /etc/nginx/nginx.conf
 	sudo ln -s `pwd`/nginx.conf /etc/nginx/nginx.conf
