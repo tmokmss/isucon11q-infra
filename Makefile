@@ -9,15 +9,15 @@ init:
 	cp /etc/inputrc ./.inputrc | true
 	rm -f ~/.inputrc
 	ln -s `pwd`/.inputrc ~/.inputrc
-	cp /etc/nginx/sites-enabled/isuumo.conf ./isuumo.conf | true
-	sudo rm -f /etc/nginx/sites-enabled/isuumo.conf
-	sudo ln -s `pwd`/isuumo.conf /etc/nginx/sites-enabled/isuumo.conf
+	cp /etc/nginx/sites-enabled/isucondition.conf ./isucondition.conf | true
+	sudo rm -f /etc/nginx/sites-enabled/isucondition.conf
+	sudo ln -s `pwd`/isuumo.conf /etc/nginx/sites-enabled/isucondition.conf
 	cp /etc/nginx/nginx.conf ./nginx.conf | true
 	sudo rm -f /etc/nginx/nginx.conf
 	sudo ln -s `pwd`/nginx.conf /etc/nginx/nginx.conf
-	cp /etc/mysql/mysql.conf.d/mysqld.cnf ./mysqld.cnf | true
-	sudo rm -f /etc/mysql/mysql.conf.d/mysqld.cnf
-	sudo ln -s `pwd`/mysqld.cnf /etc/mysql/mysql.conf.d/mysqld.cnf
+	cp /etc/mysql/mariadb.conf.d/50-server.cnf ./50-server.cnf | true
+	sudo rm -f /etc/mysql/mariadb.conf.d/50-server.cnf
+	sudo ln -s `pwd`/50-server.cnf /etc/mysql/mariadb.conf.d/50-server.cnf
 apply:
 	source ~/.bashrc
 	# bind -f ~/.inputrc
