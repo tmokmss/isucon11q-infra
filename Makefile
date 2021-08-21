@@ -9,6 +9,9 @@ init:
 	cp /etc/inputrc ./.inputrc | true
 	rm -f ~/.inputrc
 	ln -s `pwd`/.inputrc ~/.inputrc
+	cp ~/env.sh ./env.sh| true
+	rm -f ~/env.sh
+	ln -s `pwd`/env.sh ~/env.sh
 	cp /etc/nginx/sites-enabled/isucondition.conf ./isucondition.conf | true
 	sudo rm -f /etc/nginx/sites-enabled/isucondition.conf
 	sudo ln -s `pwd`/isucondition.conf /etc/nginx/sites-enabled/isucondition.conf
