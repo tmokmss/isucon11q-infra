@@ -7,7 +7,7 @@
 ## snippets
 ### setup github repo
 ```
-ssh-keygen -t ed25519 -C "email@example.com"
+ssh-keygen -t ed25519 -C "isucon@example.com"
 vim ~/.ssh/config
 
 Host *
@@ -19,8 +19,8 @@ Host *
 
 git clone git@github.com:tmokmss/isucon11q-infra.git
 
-git config --global user.email "email@example.com"
-git config --global user.name "tmokmss"
+git config --global user.email "isucon@example.com"
+git config --global user.name "isucon"
 ```
 
 ### setup other servers
