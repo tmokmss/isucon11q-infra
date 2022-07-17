@@ -1,7 +1,7 @@
 set nocompatible
 
-"nnoremap ; :
-"nnoremap : ;
+nnoremap ; :
+nnoremap : ;
 
 set backspace=start,eol,indent
 set whichwrap=b,s,[,],,~
