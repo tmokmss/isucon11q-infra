@@ -21,3 +21,8 @@ set smartcase
 set incsearch
 set wrapscan
 set hlsearch
+
+let _curfile=expand("%:r")
+if _curfile == 'Makefile'
+  set noexpandtab
+endif
