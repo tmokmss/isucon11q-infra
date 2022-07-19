@@ -30,6 +30,12 @@ git config --global user.name "isucon"
 
 scp /home/isucon/.ssh/config isu2:~/.ssh
 scp /home/isucon/.ssh/id_ed25519* isu2:~/.ssh
+
+mv ~/webapp ~/webapp_bak
+git clone git@github.com:tmokmss/isucon11q-app.git webapp
+
+git clone git@github.com:tmokmss/isucon11q-infra.git
+make init
 ```
 
 ### disable apparmor
@@ -48,7 +54,7 @@ SHOW VARIABLES LIKE ‘%version%’;
 ### setup alp
 ```
 cd ~/
-wget https://github.com/tkuchiki/alp/releases/download/v1.0.6/alp_linux_amd64.zip
+wget https://github.com/tkuchiki/alp/releases/download/v1.0.9/alp_linux_amd64.zip
 unzip alp_linux_amd64.zip
 sudo install alp /usr/local/bin/alp
 rm alp*
