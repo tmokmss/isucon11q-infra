@@ -3,6 +3,9 @@ init:
 	cp ~/.bashrc ./.bashrc | true
 	rm -f ~/.bashrc
 	ln -s `pwd`/.bashrc ~/.bashrc
+	cp ~/.tmux.conf ./.tmux.conf | true
+	rm -f ~/.tmux.conf
+	ln -s `pwd`/.tmux.conf ~/.tmux.conf
 	cp ~/.vimrc ./.vimrc | true
 	rm -f ~/.vimrc
 	ln -s `pwd`/.vimrc ~/.vimrc
