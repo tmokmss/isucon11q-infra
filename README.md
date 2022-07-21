@@ -148,6 +148,7 @@ func main() {
 Deploy and execute the below command:
 
 ```
+sudo apt install graphviz
 go tool pprof -http=0.0.0.0:8081 PATH_TO_BIANRY http://localhost:6060/debug/pprof/profile
 ```
 
