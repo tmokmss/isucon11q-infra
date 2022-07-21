@@ -125,3 +125,35 @@ sudo vim /etc/redis/redis.conf
 # supervised systemd
 # comment out bind 127.0.0.1 ::1
 ```
+
+### Setup pprof
+Modify app code
+
+```go
+import {
+	// ...
+	_ "net/http/pprof"
+}
+
+func main() {
+	runtime.SetBlockProfileRate(1)
+	runtime.SetMutexProfileFraction(1)
+	go func() {
+		log.Print(http.ListenAndServe("0.0.0.0:6060", nil))
+	}()
+ // ...
+}
+```
+
+Deploy and execute the below command:
+
+```
+sudo apt install graphviz
+go tool pprof -http=0.0.0.0:8081 PATH_TO_BIANRY http://localhost:6060/debug/pprof/profile
+```
+
+Run ssh port forwarding and open http://localhost:8081
+
+```
+ssh -L localhost:8081:localhost:8081 isu1
+```
